@@ -30,10 +30,10 @@
 
 ## 2. 共通說明
 
-- 所有 POST 需帶 `X-CSRF-Token` header（固定: UkZfU2ltdWxhdGlvbl8yMDI1MDUyNw==）。
+- 所有 POST 需帶 `X-CSRF-Token` header。
 - 回傳皆為 JSON（或檔案下載）。
 - 成功回傳 `status_code=200`，失敗依情況回傳 400/403/404/500。
-- FastAPI docs: https://erfdm-dev.wistron.com:2520/docs
+- FastAPI docs: https://domain.com:"port"/docs
 
 ---
 
