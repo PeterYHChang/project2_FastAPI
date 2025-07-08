@@ -1,0 +1,18 @@
+
+stages:
+  - deploy
+# Production deploy stage
+deploy-job:
+  stage: deploy
+  environment: production
+  only:
+    refs:
+      - main
+  tags:
+    - "shell"
+  script:
+    - echo "Deploying application..."
+    - sudo cp rf-simulation-request.py /media/exe_121/rf-simulation-request
+    - sudo cp load_simulation_data.py /media/exe_121/rf-simulation-request
+    - sudo cp .env /media/exe_121/rf-simulation-request
+    - echo "Application successfully deployed."
